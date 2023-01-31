@@ -42,6 +42,8 @@ npm install -g hexo-cli
 
 以上安装成功后，Hexo运行的环境已经全部搭建完成。
 
+> 更多相关详细教程可以参考网上的[GitHub+Hexo 搭建个人网站详细教程](https://zhuanlan.zhihu.com/p/26625249/)
+
 ---
 
 ##### 项目须知 #####
