@@ -1066,10 +1066,11 @@ body .markdown-body
 .highlight .vi{color:teal}
 .highlight .il{color:#009999}
 .highlight .gc{color:#999;background-color:#EAF2F5}
-</style><title>hexo类网站维护指南</title></head><body><article class="markdown-body"><p>博客使用的<strong>hexo</strong> + <strong>github</strong> 编写和部署</p>
+</style><title>index</title></head><body><article class="markdown-body"><p>网站使用的<strong>hexo</strong> + <strong>github</strong> 完成内容编写和项目部署</p>
+<p><a href="https://hexo.io/">hexo官网</a></p>
 <p>选择hexo主要原因：</p>
 <ul>
-<li>建站门槛低，生态发展不错</li>
+<li>建站门槛低，生态发展良好</li>
 <li>使用markdown语言，可移植性强，兼容性好</li>
 <li>灵活 不支持的样式需求（如水平居中，垂直居中）可以通过直接写HTML来</li>
 </ul>
@@ -1078,29 +1079,45 @@ body .markdown-body
 </blockquote>
 <h4 id="_1">项目环境搭建<a class="headerlink" href="#_1" title="Permanent link"></a></h4>
 <p>详细教程可以参考网上的<a href="https://zhuanlan.zhihu.com/p/26625249/">GitHub+Hexo 搭建个人网站详细教程</a></p>
+<p><strong>先根据上述教程安装nodejs和hexo</strong></p>
 <h5 id="_2">项目须知<a class="headerlink" href="#_2" title="Permanent link"></a></h5>
 <p>本站源代码地址<a class="magiclink magiclink-github magiclink-repository" href="https://github.com/shadowprompt/thefoodsecurity" title="GitHub Repository: shadowprompt/thefoodsecurity">shadowprompt/thefoodsecurity</a></p>
 <p>需要按照依赖的前端npm包，有主项目和主题suka两处</p>
 <p>步骤如下：</p>
-<p>使用终端运行
+<p>使用终端运行,</p>
 <div class="highlight"><pre>git clone https://github.com/shadowprompt/thefoodsecurity
-cd thefoodsecurity&lt;div&gt;&lt;/div&gt;
-npm install
-cd theme/suka
-npm install
+</pre></div>
+
+<p>进入主题文件夹
+<div class="highlight"><pre>cd thefoodsecurity/theme/suka
 </pre></div></p>
-<p>上述全部成功后
+<p>安装主题依赖
+<div class="highlight"><pre>npm install
+</pre></div>
+返回项目文件夹thefoodsecurity
+<div class="highlight"><pre>cd ../..
+</pre></div>
+安装项目依赖
+<div class="highlight"><pre>npm install
+</pre></div></p>
+<p>上述全部成功后，本地启动项目
 <div class="highlight"><pre>npm run server
 </pre></div></p>
-<p>打开<strong><a href="http://localhost:4000/">http://localhost:4000/</a></strong>即可看到效果</p>
+<p>打开
+<strong><a href="http://localhost:4000/">http://localhost:4000/</a></strong>
+即可看到效果</p>
 <h4 id="css">css<a class="headerlink" href="#css" title="Permanent link"></a></h4>
 <p>css源代码在主题suku内，默认使用的是压缩后的min版本，源代码变更后需要重新编译生成min版，此操作需要使用gulp，需要安装<strong>gulp-cli</strong></p>
 <p>步骤如下：</p>
-<p>使用终端运行
+<p>使用终端运行</p>
+<p>进入主题文件夹
 <div class="highlight"><pre>cd theme/suka
-npm install -g gulp-cli
-gulp // 或 gulp watchCss 只编译css并且监听css变化后自动编译
 </pre></div></p>
+<p>安装css打包工具
+<div class="highlight"><pre>npm install -g gulp-cli
+</pre></div>
+打包css
+运行<code>gulp</code>或<code>gulp watchCss</code>(只打包css并且监听css变化后自动打包)</p>
 <h4 id="hexo">hexo说明<a class="headerlink" href="#hexo" title="Permanent link"></a></h4>
 <h5 id="_3">编写内容类型<a class="headerlink" href="#_3" title="Permanent link"></a></h5>
 <p>编写的内容分为page和post两种，平时主要用来写文章的就是post，一般内容固定或者布局、内容与post风格不一致的用page。post是才有category、分页等概念，可以按照category、archive或date列表展示。</p>

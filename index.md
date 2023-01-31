@@ -1,6 +1,7 @@
-博客使用的**hexo** + **github** 编写和部署
+网站使用的**hexo** + **github** 完成内容编写和项目部署
 
 [hexo官网](https://hexo.io/)
+
 选择hexo主要原因：
 
 - 建站门槛低，生态发展良好
@@ -21,21 +22,38 @@
 
 步骤如下：
 
-使用终端运行
+使用终端运行,
+
 ```
 git clone https://github.com/shadowprompt/thefoodsecurity
-cd thefoodsecurity/theme/suka // 进入主题文件夹安装主题依赖
+```
+
+进入主题文件夹
+```
+cd thefoodsecurity/theme/suka
+```
+
+安装主题依赖
+```
 npm install
-cd ../.. // 返回项目文件夹
+```
+返回项目文件夹thefoodsecurity
+```
+cd ../..
+```
+安装项目依赖
+```
 npm install
 ```
 
-上述全部成功后
+上述全部成功后，本地启动项目
 ```
-npm run server // 本地启动项目
+npm run server
 ```
 
-打开**http://localhost:4000/**即可看到效果
+打开
+**[http://localhost:4000/](http://localhost:4000/)**
+即可看到效果
 
 #### css
 css源代码在主题suku内，默认使用的是压缩后的min版本，源代码变更后需要重新编译生成min版，此操作需要使用gulp，需要安装**gulp-cli**
@@ -43,11 +61,18 @@ css源代码在主题suku内，默认使用的是压缩后的min版本，源代�
 步骤如下：
 
 使用终端运行
+
+进入主题文件夹
 ```
 cd theme/suka
-npm install -g gulp-cli
-gulp // 或 gulp watchCss 只编译css并且监听css变化后自动编译
 ```
+
+安装css打包工具
+```
+npm install -g gulp-cli
+```
+打包css
+运行`gulp`或`gulp watchCss`(只打包css并且监听css变化后自动打包)
 
 
 #### hexo说明 ####
