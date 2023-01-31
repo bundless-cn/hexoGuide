@@ -1,4 +1,4 @@
-## 全球粮食安青年科学家联盟的网站维护指南
+### [全球粮食安青年科学家联盟](https://thefoodsecurity.org/)网站维护指南
 
 网站使用的**hexo** + **github** 完成内容编写和项目部署
 
@@ -15,9 +15,34 @@
 > PS: 要实现灵活的样式需求需要具备一定的web前端知识
 
 #### 项目环境搭建 ####
-详细教程可以参考网上的[GitHub+Hexo 搭建个人网站详细教程](https://zhuanlan.zhihu.com/p/26625249/)
+##### 1.安装git
+什么是Git ?
 
-**先根据上述教程安装nodejs和hexo**
+简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。
+
+从Git官网下载：[Git - Downloading Package](https://git-scm.com/download/win) 现在的机子基本都是64位的，选择64位的安装包，下载后安装，在命令行里输入git测试是否安装成功，若安装失败，参看其他详细的Git安装教程。
+
+
+##### 2.安装nodejs
+
+Hexo基于Node.js，Node.js下载地址：[Download | Node.js](https://nodejs.org/en/download/) 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 `node -v`:
+
+![](https://pic1.zhimg.com/v2-76ea38e9545e606f975781e47933b010_b.jpg)
+
+检测npm是否安装成功，在命令行中输入npm -v :
+
+![](https://pic2.zhimg.com/v2-bede250b8456df92475b455fda8c1dd9_b.jpg)
+
+##### 3.安装hexo
+
+使用npm命令安装Hexo，输入：
+```
+npm install -g hexo-cli
+```
+
+以上安装成功后，Hexo运行的环境已经全部搭建完成。
+
+---
 
 ##### 项目须知 #####
 本站源代码地址[https://github.com/shadowprompt/thefoodsecurity](https://github.com/shadowprompt/thefoodsecurity)
