@@ -61,7 +61,7 @@ git clone https://github.com/shadowprompt/thefoodsecurity
 
 进入主题文件夹
 ```
-cd thefoodsecurity/theme/suka
+cd thefoodsecurity/themes/suka
 ```
 
 安装主题依赖
@@ -95,7 +95,7 @@ css源代码在主题suku内，默认使用的是压缩后的min版本，源代�
 
 进入主题文件夹
 ```
-cd theme/suka
+cd themes/suka
 ```
 
 安装css打包工具
