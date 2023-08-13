@@ -2,7 +2,7 @@
 
 网站使用的**hexo** + **github** 完成内容编写和项目部署
 
-> hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异
+> **社会仿真学** 类似，hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异
 
 [hexo官网](https://hexo.io/)
 
@@ -20,16 +20,28 @@
 
 简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。
 
-从Git官网下载：[Git - Downloading Package](https://git-scm.com/download/win) 现在的机子基本都是64位的，选择64位的安装包，下载后安装，在命令行里输入git测试是否安装成功，若安装失败，参看其他详细的Git安装教程。
+从Git官网下载：[Git - Downloading Package](https://git-scm.com/download/win) 现在的机子基本都是64位的，选择64位的安装包，（也可通过[本链接下载Git-2.39.2-64-bit](https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2.39.2-64-bit.exe)）快速下载后安装。
+安装成功后在命令行里输入git测试是否安装成功。
+
+![](/images/git-v.jpg)
+
+若安装失败，参看其他详细的Git安装教程。
 
 
 ##### 2.安装nodejs
 
-Hexo基于Node.js，Node.js下载地址：[Download | Node.js](https://nodejs.org/en/download/) 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 `node -v`:
+Hexo基于Node.js，Node.js下载地址：[Download | Node.js](https://nodejs.org/en/download/) 下载安装包，（也可通过[本链接下载node-v16.19.0-x64](https://nodejs.org/download/release/v16.19.0/node-v16.19.0-x64.msi)）快速下载后安装。
+注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 `node -v`:
+
+![](/images/node-v.png)
+
 
 ![](https://pic1.zhimg.com/v2-76ea38e9545e606f975781e47933b010_b.jpg)
 
-检测npm是否安装成功，在命令行中输入npm -v :
+检测npm是否安装成功，在命令行中输入`npm -v` :
+
+![](/images/node-v.png)
+
 
 ![](https://pic2.zhimg.com/v2-bede250b8456df92475b455fda8c1dd9_b.jpg)
 
@@ -47,7 +59,9 @@ npm install -g hexo-cli
 ---
 
 ##### 项目须知 #####
-本站源代码地址[https://github.com/shadowprompt/thefoodsecurity](https://github.com/shadowprompt/thefoodsecurity)
+**全球粮食安青年科学家联盟** 源代码地址[https://github.com/Social-Simulation/thefoodsecurity](https://github.com/Social-Simulation/thefoodsecurity)
+
+> **社会仿真学** 源码地址 [https://github.com/Social-Simulation/socialsimulation](https://github.com/Social-Simulation/socialsimulation)
 
 需要按照依赖的前端npm包，有主项目和主题suka两处
 
@@ -56,7 +70,7 @@ npm install -g hexo-cli
 使用终端运行,
 
 ```
-git clone https://github.com/shadowprompt/thefoodsecurity
+git clone https://github.com/Social-Simulation/thefoodsecurity
 ```
 
 进入主题文件夹
