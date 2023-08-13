@@ -1,6 +1,5 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
   max-width: 980px;
-  outline: 1300px solid #fff;
   margin: 16px auto;
 }
 
@@ -1069,7 +1068,7 @@ body .markdown-body
 </style><title>全球粮食安青年科学家联盟网站维护指南</title></head><body><article class="markdown-body"><h3 id="_1"><a href="https://thefoodsecurity.org/">全球粮食安青年科学家联盟</a>网站维护指南<a class="headerlink" href="#_1" title="Permanent link"></a></h3>
 <p>网站使用的<strong>hexo</strong> + <strong>github</strong> 完成内容编写和项目部署</p>
 <blockquote>
-<p>hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异</p>
+<p><strong>社会仿真学</strong> 类似，hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异</p>
 </blockquote>
 <p><a href="https://hexo.io/">hexo官网</a></p>
 <p>选择hexo主要原因：</p>
@@ -1085,11 +1084,17 @@ body .markdown-body
 <h5 id="1git">1.安装git<a class="headerlink" href="#1git" title="Permanent link"></a></h5>
 <p>什么是Git ?</p>
 <p>简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。</p>
-<p>从Git官网下载：<a href="https://git-scm.com/download/win">Git - Downloading Package</a> 现在的机子基本都是64位的，选择64位的安装包，下载后安装，在命令行里输入git测试是否安装成功，若安装失败，参看其他详细的Git安装教程。</p>
+<p>从Git官网下载：<a href="https://git-scm.com/download/win">Git - Downloading Package</a> 现在的机子基本都是64位的，选择64位的安装包，（也可通过<a href="https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2.39.2-64-bit.exe">本链接下载Git-2.39.2-64-bit</a>）快速下载后安装。
+安装成功后在命令行里输入git测试是否安装成功。</p>
+<p><img alt="" src="/images/git-v.png" /></p>
+<p>若安装失败，参看其他详细的Git安装教程。</p>
 <h5 id="2nodejs">2.安装nodejs<a class="headerlink" href="#2nodejs" title="Permanent link"></a></h5>
-<p>Hexo基于Node.js，Node.js下载地址：<a href="https://nodejs.org/en/download/">Download | Node.js</a> 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 <code>node -v</code>:</p>
+<p>Hexo基于Node.js，Node.js下载地址：<a href="https://nodejs.org/en/download/">Download | Node.js</a> 下载安装包，（也可通过<a href="https://nodejs.org/download/release/v16.19.0/node-v16.19.0-x64.msi">本链接下载node-v16.19.0-x64</a>）快速下载后安装。
+注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 <code>node -v</code>:</p>
+<p><img alt="" src="/images/node-v.png" /></p>
 <p><img alt="" src="https://pic1.zhimg.com/v2-76ea38e9545e606f975781e47933b010_b.jpg" /></p>
-<p>检测npm是否安装成功，在命令行中输入npm -v :</p>
+<p>检测npm是否安装成功，在命令行中输入<code>npm -v</code> :</p>
+<p><img alt="" src="/images/node-v.png" /></p>
 <p><img alt="" src="https://pic2.zhimg.com/v2-bede250b8456df92475b455fda8c1dd9_b.jpg" /></p>
 <h5 id="3hexo">3.安装hexo<a class="headerlink" href="#3hexo" title="Permanent link"></a></h5>
 <p>使用npm命令安装Hexo，输入：
@@ -1101,11 +1106,14 @@ body .markdown-body
 </blockquote>
 <hr />
 <h5 id="_3">项目须知<a class="headerlink" href="#_3" title="Permanent link"></a></h5>
-<p>本站源代码地址<a class="magiclink magiclink-github magiclink-repository" href="https://github.com/shadowprompt/thefoodsecurity" title="GitHub Repository: shadowprompt/thefoodsecurity">shadowprompt/thefoodsecurity</a></p>
+<p><strong>全球粮食安青年科学家联盟</strong> 源代码地址<a class="magiclink magiclink-github magiclink-repository" href="https://github.com/Social-Simulation/thefoodsecurity" title="GitHub Repository: Social-Simulation/thefoodsecurity">Social-Simulation/thefoodsecurity</a></p>
+<blockquote>
+<p><strong>社会仿真学</strong> 源码地址 <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/Social-Simulation/socialsimulation" title="GitHub Repository: Social-Simulation/socialsimulation">Social-Simulation/socialsimulation</a></p>
+</blockquote>
 <p>需要按照依赖的前端npm包，有主项目和主题suka两处</p>
 <p>步骤如下：</p>
 <p>使用终端运行,</p>
-<div class="highlight"><pre>git clone https://github.com/shadowprompt/thefoodsecurity
+<div class="highlight"><pre>git clone https://github.com/Social-Simulation/thefoodsecurity
 </pre></div>
 
 <p>进入主题文件夹

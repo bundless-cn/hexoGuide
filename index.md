@@ -23,7 +23,7 @@
 从Git官网下载：[Git - Downloading Package](https://git-scm.com/download/win) 现在的机子基本都是64位的，选择64位的安装包，（也可通过[本链接下载Git-2.39.2-64-bit](https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2.39.2-64-bit.exe)）快速下载后安装。
 安装成功后在命令行里输入git测试是否安装成功。
 
-![](/images/git-v.jpg)
+![](/images/git-v.png)
 
 若安装失败，参看其他详细的Git安装教程。
 
