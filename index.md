@@ -1,8 +1,9 @@
-### [全球粮食安青年科学家联盟](https://thefoodsecurity.org/)网站维护指南
+## [全球粮食安青年科学家联盟](https://thefoodsecurity.org/)网站维护指南
 
+### 简介
 网站使用的**hexo** + **github** 完成内容编写和项目部署
 
-> **社会仿真学** 类似，hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异
+> **社会仿真学（https://socialsimulation.net）** 类似，hexo类站点维护方式基本一致，仅可能因为采用主题不同有少量差异
 
 [hexo官网](https://hexo.io/)
 
@@ -14,7 +15,8 @@
 
 > PS: 要实现灵活的样式需求需要具备一定的web前端知识
 
-#### 项目环境搭建 ####
+### 准备工作
+#### 项目环境搭建
 ##### 1.安装git
 什么是Git ?
 
@@ -35,15 +37,9 @@ Hexo基于Node.js，Node.js下载地址：[Download | Node.js](https://nodejs.or
 
 ![](/images/node-v.png)
 
-
-![](https://pic1.zhimg.com/v2-76ea38e9545e606f975781e47933b010_b.jpg)
-
 检测npm是否安装成功，在命令行中输入`npm -v` :
 
 ![](/images/node-v.png)
-
-
-![](https://pic2.zhimg.com/v2-bede250b8456df92475b455fda8c1dd9_b.jpg)
 
 ##### 3.安装hexo
 
@@ -58,7 +54,7 @@ npm install -g hexo-cli
 
 ---
 
-##### 项目须知 #####
+### 项目启动
 **全球粮食安青年科学家联盟** 源代码地址[https://github.com/Social-Simulation/thefoodsecurity](https://github.com/Social-Simulation/thefoodsecurity)
 
 > **社会仿真学** 源码地址 [https://github.com/Social-Simulation/socialsimulation](https://github.com/Social-Simulation/socialsimulation)
@@ -100,8 +96,40 @@ npm run server
 **[http://localhost:4000/](http://localhost:4000/)**
 即可看到效果
 
-#### css
-css源代码在主题suku内，默认使用的是压缩后的min版本，源代码变更后需要重新编译生成min版，此操作需要使用gulp，需要安装**gulp-cli**
+![](/images/npm-run-server.png)
+
+### 编写内容
+#### markdown语法
+熟悉常用的markdown语法，可参考[http://tool.wdphp.com/markdown.html](http://tool.wdphp.com/markdown.html)，左边输入，右边能看到预览效果
+
+> 看到表格部分即可，剩下的功能一般用不到
+
+hexo需要在本地编写（并预览）markdown格式的文章后，提交到github交由github actions完整自动打包和部署。
+
+#### 项目url生成规则
+
+网站post内容只开放了**About us**（url为/about）、**Events**（url为/events/2023/）、**Initiative**（url为/initiative/）、**Blogs**（即文章列表，url为/blogs/，里面有所属的各个post的访问入口，形如/acticle/national-grain-and-oil-security-initiative/）、**Get Involved**（url为/members/）。
+
+hexo是根据文件（或文件夹）名及其层级来生成访问url的，举例如下：
+
+![](/images/url-rule.png)
+
+
+#### 其他说明
+##### hexo编写内容类型
+编写的内容分为page和post两种，平时主要用来写文章的就是post，一般内容固定或者布局、内容与post风格不一致的用page。post是才有category、分页等概念，可以按照category、archive或date列表展示。
+
+> 网站主要是导航上面的页面使用的page，其中Blogs除外，它是category地址，显示分类为posts里面的post。
+##### 可视化编辑（不推荐）
+
+hexo没有常规的网站后台所用的编辑器，虽然可以用[hexo语雀插件](https://github.com/x-cold/yuque-hexo)实现将[语雀](https://www.yuque.com/)上编写的内容导出成markdown格式后部署（可参考[]手把手教你打造语雀+Hexo+Github Actions+COS持续集成
+(https://blog.csdn.net/qq_32666519/article/details/127594549)），但是实测效果并不好，主要原因：
+
+- 1.语雀编写的内容为html格式，并非所有html格式转为为对应的markdown，部分导出内容会出现小问题，仍需要再次修改
+- 2.语雀部分需要开通会员才能正常使用（早期可能无此问题），不宜与其深度绑定。其中最严重的问题是语雀的内容库默认是“私密”的，只有会员才能将其改完“公开”，导致语雀内容中图片导出后在非语雀环境没有权限访问而无法显示。
+
+#### markdown系统样式不满足排版要求时怎么办
+arkdown系统样式无法满足要求时需要编写css，css源代码在主题suku内，默认使用的是压缩后的min版本，源代码变更后需要重新编译生成min版，此操作需要使用gulp，需要安装**gulp-cli**
 
 步骤如下：
 
@@ -119,29 +147,36 @@ npm install -g gulp-cli
 打包css
 运行`gulp`或`gulp watchCss`(只打包css并且监听css变化后自动打包)
 
+![](/images/gulp-watchCss.png)
 
-#### hexo说明 ####
-##### 编写内容类型 #####
-编写的内容分为page和post两种，平时主要用来写文章的就是post，一般内容固定或者布局、内容与post风格不一致的用page。post是才有category、分页等概念，可以按照category、archive或date列表展示。
+### 发布
+在编写完内容并通过http://localhost:4000/ 预览满足要求后，提交改动文件至github服务器后，稍等Github Actions完成后即可。
 
-> 本站主要是导航上面的页面使用的page，其中Blogs除外，它是category地址，显示分类为posts里面的post。
+比如我们修改了/source/_post/test.md的内容并保存文件
+1. 切换至如图所示的tab（左侧第三个图标 Source Control），这里能看到改动的文件，点击每一个文件后还能看到进行了那些改动。
 
-##### 编写内容 #####
+![](/images/git-step1.png)
 
-本站post内容只开放了一个名为*posts*的category列表入口（即导航部分的**Blogs**，url为/blogs/posts/），里面有所属的各个post的访问入口（形如/acticle/xxxx/）
+2. 填写commit信息，并push至服务器
+![](/images/git-step2.png)
 
-hexo需要在本地编写（并预览）markdown格式的文章后，提交到github交由github actions完整自动打包和部署。
+3.push后，Source Control显示文件为空，同时github上有刚才的提交记录
 
-##### 可视化编辑 ####
+![](/images/git-step3.png)
 
-hexo没有常规的网站后台所用的编辑器，虽然可以用[hexo语雀插件](https://github.com/x-cold/yuque-hexo)实现将[语雀](https://www.yuque.com/)上编写的内容导出成markdown格式后部署（可参考[]手把手教你打造语雀+Hexo+Github Actions+COS持续集成
-(https://blog.csdn.net/qq_32666519/article/details/127594549)），但是实测效果并不好，主要原因：
+![](/images/git-step4.png)
 
-- 1.语雀编写的内容为html格式，并非所有html格式转为为对应的markdown，部分导出内容会出现小问题，仍需要再次修改
-- 2.语雀部分需要开通会员才能正常使用（早期可能无此问题），不宜与其深度绑定。其中最严重的问题是语雀的内容库默认是“私密”的，只有会员才能将其改完“公开”，导致语雀内容中图片导出后在非语雀环境没有权限访问而无法显示。
+4. 稍等几分钟后github会完成部署
 
-#### 项目结构介绍 ####
-##### 主题 #####
+![](/images/git-step5.png)
+
+5. 在网站预览效果
+
+![](/images/git-step6.png)
+
+
+### 项目结构介绍
+##### 主题
 本博客基于suka主题（[官网地址](https://theme-suka.skk.moe/docs/)）二次改造后使用
 更改了部分样式
 
