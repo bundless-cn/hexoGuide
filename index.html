@@ -1136,6 +1136,8 @@ body .markdown-body
 即可看到效果</p>
 <p><img alt="" src="/images/npm-run-server.png" /></p>
 <h3 id="_6">编写内容<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
+<h4 id="ide">IDE<a class="headerlink" href="#ide" title="Permanent link"></a></h4>
+<p>可以使用微软免费开源的Visual Studio Code<a href="https://az764295.vo.msecnd.net/stable/6c3e3dba23e8fadc360aed75ce363ba185c49794/VSCodeUserSetup-x64-1.81.1.exe">下载地址</a>或其它自己顺手的编辑器</p>
 <h4 id="markdown">markdown语法<a class="headerlink" href="#markdown" title="Permanent link"></a></h4>
 <p>熟悉常用的markdown语法，可参考<a href="http://tool.wdphp.com/markdown.html">http://tool.wdphp.com/markdown.html</a>，左边输入，右边能看到预览效果</p>
 <blockquote>
@@ -1174,14 +1176,24 @@ body .markdown-body
 <p><img alt="" src="/images/gulp-watchCss.png" /></p>
 <h3 id="_9">发布<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
 <p>在编写完内容并通过http://localhost:4000/ 预览满足要求后，提交改动文件至github服务器后，稍等Github Actions完成后即可。</p>
+<h4 id="github">github账户<a class="headerlink" href="#github" title="Permanent link"></a></h4>
+<p>因为现在项目没有自己的服务器，源代码均在<a href="https://github.com">github</a>上，所以需要申请github并授权后（非授权用户只能查看不能修改）才能发布。</p>
+<h4 id="_10">发布流程举例<a class="headerlink" href="#_10" title="Permanent link"></a></h4>
+<blockquote>
+<p>以Visual Studio Code操作为例</p>
+</blockquote>
 <p>比如我们修改了/source/_post/test.md的内容并保存文件
 1. 切换至如图所示的tab（左侧第三个图标 Source Control），这里能看到改动的文件，点击每一个文件后还能看到进行了那些改动。</p>
 <p><img alt="" src="/images/git-step1.png" /></p>
 <ol start="2">
-<li>填写commit信息，并push至服务器
-<img alt="" src="/images/git-step2.png" /></li>
+<li>
+<p>填写commit信息，并push至服务器
+<img alt="" src="/images/git-step2.png" /></p>
+</li>
+<li>
+<p>push后，Source Control显示文件为空，同时github上有刚才的提交记录</p>
+</li>
 </ol>
-<p>3.push后，Source Control显示文件为空，同时github上有刚才的提交记录</p>
 <p><img alt="" src="/images/git-step3.png" /></p>
 <p><img alt="" src="/images/git-step4.png" /></p>
 <ol start="4">
@@ -1192,8 +1204,8 @@ body .markdown-body
 <li>在网站预览效果</li>
 </ol>
 <p><img alt="" src="/images/git-step6.png" /></p>
-<h3 id="_10">项目结构介绍<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
-<h5 id="_11">主题<a class="headerlink" href="#_11" title="Permanent link"></a></h5>
+<h3 id="_11">项目结构介绍<a class="headerlink" href="#_11" title="Permanent link"></a></h3>
+<h5 id="_12">主题<a class="headerlink" href="#_12" title="Permanent link"></a></h5>
 <p>本博客基于suka主题（<a href="https://theme-suka.skk.moe/docs/">官网地址</a>）二次改造后使用
 更改了部分样式</p>
 <p>因为的业务场景跟单纯的个人博客有所不同，为了将常见博客通用的部分内容隐藏，额外增加了几个front-matter控制开关，默认值为false，避免每篇内容都需要手动关闭</p>

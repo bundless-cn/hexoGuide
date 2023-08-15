@@ -99,6 +99,8 @@ npm run server
 ![](/images/npm-run-server.png)
 
 ### 编写内容
+#### IDE
+可以使用微软免费开源的Visual Studio Code[下载地址](https://az764295.vo.msecnd.net/stable/6c3e3dba23e8fadc360aed75ce363ba185c49794/VSCodeUserSetup-x64-1.81.1.exe)或其它自己顺手的编辑器
 #### markdown语法
 熟悉常用的markdown语法，可参考[http://tool.wdphp.com/markdown.html](http://tool.wdphp.com/markdown.html)，左边输入，右边能看到预览效果
 
@@ -152,6 +154,12 @@ npm install -g gulp-cli
 ### 发布
 在编写完内容并通过http://localhost:4000/ 预览满足要求后，提交改动文件至github服务器后，稍等Github Actions完成后即可。
 
+#### github账户
+因为现在项目没有自己的服务器，源代码均在[github](https://github.com)上，所以需要申请github并授权后（非授权用户只能查看不能修改）才能发布。
+
+#### 发布流程举例
+> 以Visual Studio Code操作为例
+
 比如我们修改了/source/_post/test.md的内容并保存文件
 1. 切换至如图所示的tab（左侧第三个图标 Source Control），这里能看到改动的文件，点击每一个文件后还能看到进行了那些改动。
 
@@ -160,7 +168,7 @@ npm install -g gulp-cli
 2. 填写commit信息，并push至服务器
 ![](/images/git-step2.png)
 
-3.push后，Source Control显示文件为空，同时github上有刚才的提交记录
+3. push后，Source Control显示文件为空，同时github上有刚才的提交记录
 
 ![](/images/git-step3.png)
 
